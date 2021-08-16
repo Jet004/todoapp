@@ -8,6 +8,118 @@
     <title>ToDo App</title>
 </head>
 <body>
-    <h1>ToDo App</h1>
+    <h1>TODO App</h1>
+    <fieldset>
+        <legend>Authentication</legend>
+        <form method="POST"
+            action="/api/login">
+            <input type="text" 
+                name="username" 
+                required>
+            <input type="password" 
+                name="password"
+                required>
+            <input type="submit" 
+                value="login">
+        </form>
+        <form method="PUT"
+            action="/api/register">
+            <input type="text" 
+                name="username" 
+                required>
+            <input type="email" 
+                name="email"
+                required>
+            <input type="password" 
+                name="password"
+                required>
+            <input type="submit" 
+                value="register">
+        </form>
+        <form method="GET"
+            action="/api/isloggedin">
+            <input type="submit" 
+                value="isloggedin">
+        </form>
+        <form method="GET"
+            action="/api/doesuserexist">
+            <input type="text" 
+                name="username"
+                required>
+            <input type="submit" 
+                value="does user exist">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Todo Category</legend>
+        <form method="GET"
+            action="/api/getcat">
+            <input type="submit" 
+                value="get categories">
+        </form>
+        <form method="PUT"
+            action="/api/addcat">
+            <input type="text" 
+                name="categoryname"
+                required>
+            <input type="submit" 
+                value="add new category">
+        </form>
+        <form method="DELETE"
+            action="/api/delcat">
+            <input type="hidden" 
+                name="catid"
+                value="0">
+            <input type="submit" 
+                value="delete category">
+        </form>
+        <form method="PATCH"
+            action="/api/updatecat">
+            <input type="hidden" 
+                name="catid"
+                value="0">
+            <input type="text" 
+                name="categoryname"
+                required>
+            <input type="submit" 
+                value="edit category">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Todo Items</legend>
+        <form method="GET"
+            action="/api/gettodos">
+            <input type="submit" 
+                value="get todos">
+        </form>
+        <form method="PUT"
+            action="/api/addtodo">
+            <input type="text" 
+                name="todoitem"
+                required>
+            <input type="submit" 
+                value="add todos">
+        </form>
+        <form method="DELETE"
+            action="/api/deltodo">
+            <input type="hidden" 
+                name="todoid"
+                value="0">
+            <input type="submit" 
+                value="delete todo">
+        </form>
+        <form method="PATCH"
+            action="/api/updatetodo">
+            <input type="hidden" 
+                name="todoid"
+                value="0">
+            <input type="text" 
+                name="todoitem"
+                required>
+            <input type="submit" 
+                value="edit todo">
+        </form>
+    </fieldset>
+
 </body>
 </html>

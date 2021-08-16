@@ -1,3 +1,13 @@
 body {
     background-color: seashell;
 }
+
+input, label, textarea {
+    display: block;
+    width: 16em;
+}
+
+input:not(:placeholder-shown):not(:active):invalid {
+    box-shadow: pink .2em .2em .2em;
+    background-color: seashell;
+}

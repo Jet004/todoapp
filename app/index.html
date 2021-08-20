@@ -12,7 +12,8 @@
     <fieldset>
         <legend>Authentication</legend>
         <form method="POST"
-            action="/api/login">
+            action="/api/login"
+            onsubmit="login(event)">
             <input type="text" 
                 name="username" 
                 required>
@@ -23,7 +24,8 @@
                 value="login">
         </form>
         <form method="PUT"
-            action="/api/register">
+            action="/api/register"
+            onsubmit="register(event)">
             <input type="text" 
                 name="username" 
                 required>
@@ -37,12 +39,14 @@
                 value="register">
         </form>
         <form method="GET"
-            action="/api/isloggedin">
+            action="/api/isloggedin"
+            onsubmit="userLoggedIn(event)">
             <input type="submit" 
                 value="isloggedin">
         </form>
         <form method="GET"
-            action="/api/doesuserexist">
+            action="/api/doesuserexist"
+            onsubmit="userExists(event)">
             <input type="text" 
                 name="username"
                 required>
@@ -53,12 +57,14 @@
     <fieldset>
         <legend>Todo Category</legend>
         <form method="GET"
-            action="/api/getcat">
+            action="/api/getcat"
+            onsubmit="getCategories(event)">
             <input type="submit" 
                 value="get categories">
         </form>
         <form method="PUT"
-            action="/api/addcat">
+            action="/api/addcat"
+            onsubmit="addCategory(event)">
             <input type="text" 
                 name="categoryname"
                 required>
@@ -66,7 +72,8 @@
                 value="add new category">
         </form>
         <form method="DELETE"
-            action="/api/delcat">
+            action="/api/delcat"
+            onsubmit="delCategory(event)">
             <input type="hidden" 
                 name="catid"
                 value="0">
@@ -74,7 +81,8 @@
                 value="delete category">
         </form>
         <form method="PATCH"
-            action="/api/updatecat">
+            action="/api/updatecat"
+            onsubmit="updateCategory(event)">
             <input type="hidden" 
                 name="catid"
                 value="0">
@@ -88,12 +96,14 @@
     <fieldset>
         <legend>Todo Items</legend>
         <form method="GET"
-            action="/api/gettodos">
+            action="/api/gettodos"
+            onsubmit="getTodos(event)">
             <input type="submit" 
                 value="get todos">
         </form>
         <form method="PUT"
-            action="/api/addtodo">
+            action="/api/addtodo"
+            onsubmit="addTodo(event)">
             <input type="text" 
                 name="todoitem"
                 required>
@@ -101,7 +111,8 @@
                 value="add todos">
         </form>
         <form method="DELETE"
-            action="/api/deltodo">
+            action="/api/deltodo"
+            onsubmit="delTodo(event)">
             <input type="hidden" 
                 name="todoid"
                 value="0">
@@ -109,7 +120,8 @@
                 value="delete todo">
         </form>
         <form method="PATCH"
-            action="/api/updatetodo">
+            action="/api/updatetodo"
+            onsubmit="updateTodo(event)">
             <input type="hidden" 
                 name="todoid"
                 value="0">

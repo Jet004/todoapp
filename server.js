@@ -14,6 +14,9 @@ app.put('/api/register', function(req, res){
 app.get('/api/isloggedin', function(req, res){
     res.send('Test isloggedin')
 })
+app.get('/api/doesuserexist', function(req, res){
+    res.send('Test userExists')
+})
 
 
 // todo list categories CRUD

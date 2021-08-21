@@ -14,6 +14,9 @@ app.put('/api/register', function(req, res){
 app.get('/api/isloggedin', function(req, res){
     res.send('Test isloggedin')
 })
+app.get('/api/logout', function(req, res){
+    res.send('Test log out')
+})
 app.get('/api/doesuserexist', function(req, res){
     res.send('Test userExists')
 })
@@ -35,17 +38,17 @@ app.patch('/api/updatecat/:catid', function(req, res){
 
 
 // todo list CRUD
-app.get('/api/gettodos:catid', function(req, res){
-    res.send('Test addtodo')
+app.get('/api/gettodos/:catid', function(req, res){
+    res.send('Test get todo')
 })
 app.put('/api/addtodo', function(req, res){
-    res.send('Test addtodo')
+    res.send('Test add todo')
 })
 app.delete('/api/deltodo/:todoid', function(req, res){
-    res.send('Test deltodo')
+    res.send('Test del todo')
 })
 app.patch('/api/updatetodo/:todoid', function(req, res){
-    res.send('Test updatetodo')
+    res.send('Test update todo')
 })
 
 app.listen(3000)
